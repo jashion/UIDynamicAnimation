@@ -163,7 +163,7 @@ UIDynamicBehavior里提供了一个`@property(nonatomic, copy) void (^action)(vo
 
 ###6.Demo展示
 
-![UIDynamicAnimator](http://jashion.b0.upaiyun.com/images/UIDynamics.gif)
+![UIDynamicAnimator](UIDynamics.gif)
 
 [源码下载](https://github.com/jashion/UIDynamicAnimation.git)
 
