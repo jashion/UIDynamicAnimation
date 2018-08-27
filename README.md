@@ -1,10 +1,10 @@
 # UIDynamicAnimation
 UIDynamic是iOS7的API，主要模拟现实世界的力学系统。
 
-#UIKit Dynamics动力系统入门
-###1.什么是动力系统(What is the UIKit Dynamics?)
+# UIKit Dynamics动力系统入门
+### 1.什么是动力系统(What is the UIKit Dynamics?)
 动力系统的引入，并不是替代CoreAnimation，而是对模拟现实世界物体运动的补充，比如，碰撞，重力，悬挂等等。所以说，UIKit动力系统的引入，大大简化了一些交互动画（不需要自己实现一些模拟现实世界物理动力系统的动画），丰富了UI设计。
-###2.动力系统怎么使用(How to use it?)
+### 2.动力系统怎么使用(How to use it?)
 **UIKit动力系统结构如下：**
 
 ![image](http://jashion.b0.upaiyun.com/images/UIDynamics.png)
@@ -96,7 +96,7 @@ behavior3.resistance = 0.3;
 [myAnimator addBehavior: behavior3];
 ```
 
-###3.组合(Group)
+### 3.组合(Group)
 
 所有的行为都可以组合起来，如碰撞和重力，可以类似于物体做自由落体运动，然后和地面碰撞。代码如下：
 
@@ -158,10 +158,10 @@ behavior.angularResistance = 0.2;
 2.完全自定义行为<br>
 UIDynamicBehavior里提供了一个`@property(nonatomic, copy) void (^action)(void)`，animator将会在行为发生期间，每一步都调用这个block。也就是说，你想自定义行为就得在这里写自己的一些代码。具体就是在这个block中向所有的item询问它们当前的center和transform状态，然后经过计算，把新的值赋予相应的item，从而该改变它们在屏幕上的位置，大小，角度，方向等等。
 
-###5.终结(Summary)
+### 5.终结(Summary)
 总的来说，iOS7引进的这套动力系统，大大丰富了我们动画表达，但是，该系统有着一些限制，会消耗一定的CPU资源，并且，当它们被添加到动画系统后，只能通过动画系统改变位置，而外部对于UIDynamicsItem的center,transform等设定是被忽略的，除此之外，该系统也没有现实世界那么精确，当计算迭代无法得到有效解的时候，动画将无法得到正确的呈现，所以，不要将动力系统神化。
 
-###6.Demo展示
+### 6.Demo展示
 
 ![UIDynamicAnimator](UIDynamics.gif)
 
